@@ -1,15 +1,57 @@
+/* Barra vermelha superior */
+.header-bar {
+    background-color: red;
+    height: 40px;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1000; /* Para garantir que fique acima de outros elementos */
+}
+
+/* Estilos para o botão */
+button {
+    background-color: #ffca1bde; /* Cor de fundo verde */
+    border: none; /* Remove a borda padrão */
+    color: white; /* Cor do texto */
+    padding: 15px 32px; /* Espaçamento interno */
+    text-align: center; /* Alinhamento do texto */
+    text-decoration: none; /* Remove o sublinhado padrão */
+    display: inline-block; /* Faz o botão se comportar como um bloco inline */
+    font-size: 16px; /* Tamanho da fonte */
+    margin: 4px 2px; /* Margem */
+    cursor: pointer; /* Muda o cursor para indicar que é clicável */
+    border-radius: 8px; /* Borda arredondada */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para um efeito de profundidade */
+    transition: background-color 0.3s, transform 0.3s; /* Transição suave */
+}
+
+/* Efeito de hover */
+button:hover {
+    background-color: #bb9518de; /* Cor de fundo mais escura quando o cursor está sobre o botão */
+    transform: scale(1.05); /* Leve aumento no tamanho */
+}
+
+/* Efeito de foco */
+button:focus {
+    outline: none; /* Remove o contorno padrão */
+    box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.3); /* Adiciona uma sombra ao redor quando o botão está em foco */
+}
+
 body {
     background-color: #f8f9fa;
 }
 
 #pokemon-info {
     background-color: #ffffff;
-    padding: 20px;
+    padding: 25px;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
 
-.pokemon-image{
-    width: 150px;
-    height: 150px;
+#pokemon-info img {
+    max-width: 150px; /* Define a largura máxima da imagem */
+    max-height: 150px; /* Define a altura máxima da imagem */
+    width: auto; /* Mantém a proporção da largura */
+    height: auto; /* Mantém a proporção da altura */
 }
